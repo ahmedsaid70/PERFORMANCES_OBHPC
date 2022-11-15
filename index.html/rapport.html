@@ -31,7 +31,7 @@
         <ul>
             <li><b>Cpu frequency min and max : </b>2GHZ</li>
         </ul>
-                    <img class="cpu" src="cpu.png" alt="">
+                    <img class="cpu" src="../dgemm/cpu.png" alt="">
 
 <section>
     <h2>DGEMM</h2>
@@ -46,20 +46,20 @@
 <section class="section">
     <header><h3>GCC with all optimizaton flags</h3></header>
     <div class="images_sec">
-        <img src="graphs/gcc_o0.png" alt="">
-        <img src="graphs/gcc_o1.png" alt="">
-        <img src="graphs/gcc_o2.png" alt="">
-        <img src="graphs/gcc_o3.png" alt="">
+        <img src="../dgemm/graphs/gcc_o0.png" alt="">
+        <img src="../dgemm/graphs/gcc_o1.png" alt="">
+        <img src="../dgemm/graphs/gcc_o2.png" alt="">
+        <img src="../dgemm/graphs/gcc_o3.png" alt="">
     </div>
     <p>with GCC compiler we see that CBLAS algorithme is the best in performance in all flags but we can notice a drop in performance in the other algorithms when we used o2 flag</p>
 </section>
 <section>
     <header><h3>Clang with all optimizaton flags</h3></header>
     <div class="images_sec">
-        <img src="graphs/clang_o0.png" alt="">
-        <img src="graphs/clang_o1.png" alt="">
-        <img src="graphs/clang_o2.png" alt="">
-        <img src="graphs/clang_o3.png" alt="">
+        <img src="../dgemm/graphs/clang_o0.png" alt="">
+        <img src="../dgemm/graphs/clang_o1.png" alt="">
+        <img src="../dgemm/graphs/clang_o2.png" alt="">
+        <img src="../dgemm/graphs/clang_o3.png" alt="">
     </div>  
     <p>the same thing with clang the o2 flag is doing the opposite job</p>
 
@@ -67,67 +67,67 @@
 <section>
     <header><h3>Comparaison between flags Gcc</h3></header>
     <div class="images_sec">
-        <img src="graphs/gcc_IJK.png" alt="">
-        <img src="graphs/gcc_iKJ.png" alt="">
-        <img src="graphs/gcc_IEX.png" alt="">
-        <img src="graphs/gcc_CBLAS.png" alt="">
-        <img src="graphs/gcc_UNROLL4.png" alt="">
-        <img src="graphs/gcc_UNROLL8.png" alt="">
+        <img src="../dgemm/graphs/gcc_IJK.png" alt="">
+        <img src="../dgemm/graphs/gcc_iKJ.png" alt="">
+        <img src="../dgemm/graphs/gcc_IEX.png" alt="">
+        <img src="../dgemm/graphs/gcc_CBLAS.png" alt="">
+        <img src="../dgemm/graphs/gcc_UNROLL4.png" alt="">
+        <img src="../dgemm/graphs/gcc_UNROLL8.png" alt="">
     </div>  
 </section>
 <section>
     <header><h3>Comparaison between flags Clang</h3></header>
     <div class="images_sec">
-        <img src="graphs/clang_IJK.png" alt="">
-        <img src="graphs/clang_iKJ.png" alt="">
-        <img src="graphs/clang_IEX.png" alt="">
-        <img src="graphs/clang_CBLAS.png" alt="">
-        <img src="graphs/clang_UNROLL4.png" alt="">
-        <img src="graphs/clang_UNROLL8.png" alt="">
+        <img src="../dgemm/graphs/clang_IJK.png" alt="">
+        <img src="../dgemm/graphs/clang_iKJ.png" alt="">
+        <img src="../dgemm/graphs/clang_IEX.png" alt="">
+        <img src="../dgemm/graphs/clang_CBLAS.png" alt="">
+        <img src="../dgemm/graphs/clang_UNROLL4.png" alt="">
+        <img src="../dgemm/graphs/clang_UNROLL8.png" alt="">
     </div>  
 </section>
 <section>
     <header><h3>Comparaison between clang and Gcc in O0</h3></header>
     <div class="images_sec">
-        <img src="graphs/o0_clang_gcc_IJK.png" alt="">
-        <img src="graphs/o0_clang_gcc_IKJ.png" alt="">
-        <img src="graphs/o0_clang_gcc_IEX.png" alt="">
-        <img src="graphs/o0_clang_gcc_CBLAS.png" alt="">
-        <img src="graphs/o0_clang_gcc_UNROLL4.png" alt="">
-        <img src="graphs/o0_clang_gcc_UNROLL8.png" alt="">
+        <img src="../dgemm/graphs/o0_clang_gcc_IJK.png" alt="">
+        <img src="../dgemm/graphs/o0_clang_gcc_IKJ.png" alt="">
+        <img src="../dgemm/graphs/o0_clang_gcc_IEX.png" alt="">
+        <img src="../dgemm/graphs/o0_clang_gcc_CBLAS.png" alt="">
+        <img src="../dgemm/graphs/o0_clang_gcc_UNROLL4.png" alt="">
+        <img src="../dgemm/graphs/o0_clang_gcc_UNROLL8.png" alt="">
     </div>  
 </section>
 <section>
     <header><h3>Comparaison between clang and Gcc in O1</h3></header>
     <div class="images_sec">
-        <img src="graphs/o1_clang_gcc_IJK.png" alt="">
-        <img src="graphs/o1_clang_gcc_IKJ.png" alt="">
-        <img src="graphs/o1_clang_gcc_IEX.png" alt="">
-        <img src="graphs/o1_clang_gcc_CBLAS.png" alt="">
-        <img src="graphs/o1_clang_gcc_UNROLL4.png" alt="">
-        <img src="graphs/o1_clang_gcc_UNROLL8.png" alt="">
+        <img src="../dgemm/graphs/o1_clang_gcc_IJK.png" alt="">
+        <img src="../dgemm/graphs/o1_clang_gcc_IKJ.png" alt="">
+        <img src="../dgemm/graphs/o1_clang_gcc_IEX.png" alt="">
+        <img src="../dgemm/graphs/o1_clang_gcc_CBLAS.png" alt="">
+        <img src="../dgemm/graphs/o1_clang_gcc_UNROLL4.png" alt="">
+        <img src="../dgemm/graphs/o1_clang_gcc_UNROLL8.png" alt="">
     </div>  
 </section>
 <section>
     <header><h3>Comparaison between clang and Gcc in O2</h3></header>
     <div class="images_sec">
-        <img src="graphs/o2_clang_gcc_IJK.png" alt="">
-        <img src="graphs/o2_clang_gcc_IKJ.png" alt="">
-        <img src="graphs/o2_clang_gcc_IEX.png" alt="">
-        <img src="graphs/o2_clang_gcc_CBLAS.png" alt="">
-        <img src="graphs/o2_clang_gcc_UNROLL4.png" alt="">
-        <img src="graphs/o2_clang_gcc_UNROLL8.png" alt="">
+        <img src="../dgemm/graphs/o2_clang_gcc_IJK.png" alt="">
+        <img src="../dgemm/graphs/o2_clang_gcc_IKJ.png" alt="">
+        <img src="../dgemm/graphs/o2_clang_gcc_IEX.png" alt="">
+        <img src="../dgemm/graphs/o2_clang_gcc_CBLAS.png" alt="">
+        <img src="../dgemm/graphs/o2_clang_gcc_UNROLL4.png" alt="">
+        <img src="../dgemm/graphs/o2_clang_gcc_UNROLL8.png" alt="">
     </div>  
 </section>
 <section>
     <header><h3>Comparaison between clang and Gcc in O3</h3></header>
     <div class="images_sec">
-        <img src="graphs/o3_clang_gcc_IJK.png" alt="">
-        <img src="graphs/o3_clang_gcc_IKJ.png" alt="">
-        <img src="graphs/o3_clang_gcc_IEX.png" alt="">
-        <img src="graphs/o3_clang_gcc_CBLAS.png" alt="">
-        <img src="graphs/o3_clang_gcc_UNROLL4.png" alt="">
-        <img src="graphs/o3_clang_gcc_UNROLL8.png" alt="">
+        <img src="../dgemm/graphs/o3_clang_gcc_IJK.png" alt="">
+        <img src="../dgemm/graphs/o3_clang_gcc_IKJ.png" alt="">
+        <img src="../dgemm/graphs/o3_clang_gcc_IEX.png" alt="">
+        <img src="../dgemm/graphs/o3_clang_gcc_CBLAS.png" alt="">
+        <img src="../dgemm/graphs/o3_clang_gcc_UNROLL4.png" alt="">
+        <img src="../dgemm/graphs/o3_clang_gcc_UNROLL8.png" alt="">
     </div>  
 </section>
 <p>We can conclude that o2 flag is best for clang compiler and no for gcc</p>
