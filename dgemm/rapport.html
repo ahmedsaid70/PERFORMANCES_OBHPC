@@ -1,0 +1,245 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .cpu{
+        width: 40%;
+    }
+    img{
+        width: 22%;
+    }
+    .images_sec{
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+<body>
+    <main>
+        <h1>Le Rapport </h1>
+        <ul>
+            <li><b>Name : </b>SEBAOUNE Ahmed Said</li>
+            <li><b>Email : </b>s.ahmed.senaoune@gmail.com</li>
+            <li><b>Github :</b><a href="https://github.com/ahmedsaid70/PERFORMANCES_OBHPC">@ahmedsaid70/PERFORMANCES_OBHPC</a></li>
+        </ul>
+
+        <ul>
+            <li><b>Cpu frequency min and max : </b>2GHZ</li>
+        </ul>
+                    <img class="cpu" src="cpu.png" alt="">
+
+<section>
+    <h2>DGEMM</h2>
+    <p>dgemm are matrix multiplication algorithms in this dm we worked on 5 of them </p>
+    <ul>
+        <li><p>IJK : wich is the default loop</p></li>
+        <li>IKJ : a smarter loop to avoid same calculations</li>
+        <li>IEX</li>
+        <li>CBLAS : special algorithms taht optimize the matrix multiplication </li>
+        <li>UNROLL : it takes advanteg of the direct access of the next memory cell and avoiding more branching (less loop) </li>
+    </ul>
+<section class="section">
+    <header><h3>GCC with all optimizaton flags</h3></header>
+    <div class="images_sec">
+        <img src="graphs/gcc_o0.png" alt="">
+        <img src="graphs/gcc_o1.png" alt="">
+        <img src="graphs/gcc_o2.png" alt="">
+        <img src="graphs/gcc_o3.png" alt="">
+    </div>
+    <p>with GCC compiler we see that CBLAS algorithme is the best in performance in all flags but we can notice a drop in performance in the other algorithms when we used o2 flag</p>
+</section>
+<section>
+    <header><h3>Clang with all optimizaton flags</h3></header>
+    <div class="images_sec">
+        <img src="graphs/clang_o0.png" alt="">
+        <img src="graphs/clang_o1.png" alt="">
+        <img src="graphs/clang_o2.png" alt="">
+        <img src="graphs/clang_o3.png" alt="">
+    </div>  
+    <p>the same thing with clang the o2 flag is doing the opposite job</p>
+
+</section>
+<section>
+    <header><h3>Comparaison between flags Gcc</h3></header>
+    <div class="images_sec">
+        <img src="graphs/gcc_IJK.png" alt="">
+        <img src="graphs/gcc_iKJ.png" alt="">
+        <img src="graphs/gcc_IEX.png" alt="">
+        <img src="graphs/gcc_CBLAS.png" alt="">
+        <img src="graphs/gcc_UNROLL4.png" alt="">
+        <img src="graphs/gcc_UNROLL8.png" alt="">
+    </div>  
+</section>
+<section>
+    <header><h3>Comparaison between flags Clang</h3></header>
+    <div class="images_sec">
+        <img src="graphs/clang_IJK.png" alt="">
+        <img src="graphs/clang_iKJ.png" alt="">
+        <img src="graphs/clang_IEX.png" alt="">
+        <img src="graphs/clang_CBLAS.png" alt="">
+        <img src="graphs/clang_UNROLL4.png" alt="">
+        <img src="graphs/clang_UNROLL8.png" alt="">
+    </div>  
+</section>
+<section>
+    <header><h3>Comparaison between clang and Gcc in O0</h3></header>
+    <div class="images_sec">
+        <img src="graphs/o0_clang_gcc_IJK.png" alt="">
+        <img src="graphs/o0_clang_gcc_IKJ.png" alt="">
+        <img src="graphs/o0_clang_gcc_IEX.png" alt="">
+        <img src="graphs/o0_clang_gcc_CBLAS.png" alt="">
+        <img src="graphs/o0_clang_gcc_UNROLL4.png" alt="">
+        <img src="graphs/o0_clang_gcc_UNROLL8.png" alt="">
+    </div>  
+</section>
+<section>
+    <header><h3>Comparaison between clang and Gcc in O1</h3></header>
+    <div class="images_sec">
+        <img src="graphs/o1_clang_gcc_IJK.png" alt="">
+        <img src="graphs/o1_clang_gcc_IKJ.png" alt="">
+        <img src="graphs/o1_clang_gcc_IEX.png" alt="">
+        <img src="graphs/o1_clang_gcc_CBLAS.png" alt="">
+        <img src="graphs/o1_clang_gcc_UNROLL4.png" alt="">
+        <img src="graphs/o1_clang_gcc_UNROLL8.png" alt="">
+    </div>  
+</section>
+<section>
+    <header><h3>Comparaison between clang and Gcc in O2</h3></header>
+    <div class="images_sec">
+        <img src="graphs/o2_clang_gcc_IJK.png" alt="">
+        <img src="graphs/o2_clang_gcc_IKJ.png" alt="">
+        <img src="graphs/o2_clang_gcc_IEX.png" alt="">
+        <img src="graphs/o2_clang_gcc_CBLAS.png" alt="">
+        <img src="graphs/o2_clang_gcc_UNROLL4.png" alt="">
+        <img src="graphs/o2_clang_gcc_UNROLL8.png" alt="">
+    </div>  
+</section>
+<section>
+    <header><h3>Comparaison between clang and Gcc in O3</h3></header>
+    <div class="images_sec">
+        <img src="graphs/o3_clang_gcc_IJK.png" alt="">
+        <img src="graphs/o3_clang_gcc_IKJ.png" alt="">
+        <img src="graphs/o3_clang_gcc_IEX.png" alt="">
+        <img src="graphs/o3_clang_gcc_CBLAS.png" alt="">
+        <img src="graphs/o3_clang_gcc_UNROLL4.png" alt="">
+        <img src="graphs/o3_clang_gcc_UNROLL8.png" alt="">
+    </div>  
+</section>
+<p>We can conclude that o2 flag is best for clang compiler and no for gcc</p>
+<p>cblas algorithm atmost performance with gcc is when used with no optimization flag and</p>
+<p>and atmost performance with clang is with o2 flag</p>
+<p>in general clang compiler is better then gcc in handling matrix multiplucation</p>
+
+
+</section>
+
+<section>
+    <h2>DOT PRODUCT</h2>
+    <p>dot product is an operation between two vectors </p>
+    <section>
+        <header><h3>Gcc with Optimization flags</h3></header>
+        <div class="images_sec">
+            <img src="../dotprod/graphs/gcc_o0.png" alt="">
+            <img src="../dotprod/graphs/gcc_o1.png" alt="">
+            <img src="../dotprod/graphs/gcc_o2.png" alt="">
+            <img src="../dotprod/graphs/gcc_o3.png" alt="">
+        </div>  
+    </section>
+    <section>
+        <header><h3>clang with Optimization flags</h3></header>
+        <div class="images_sec">
+            <img src="../dotprod/graphs/clang_o0.png" alt="">
+            <img src="../dotprod/graphs/clang_o1.png" alt="">
+            <img src="../dotprod/graphs/clang_o2.png" alt="">
+            <img src="../dotprod/graphs/clang_o3.png" alt="">
+        </div>  
+    </section>
+    <p>Unroll8 algorithm is by far preforming better then the base algorithm so we can conclude that branching and adressing memory can really lower the performance</p>    
+
+    <section>
+        <header><h3>Gcc vs Clang in o0</h3></header>
+        <div class="images_sec">
+            <img src="../dotprod/graphs/o0_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o0_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+        <p>Here we can see that gcc preform better on the unroll algorithm but on the base clang wins </p>
+
+        <header><h3>Gcc vs Clang in o1</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/o1_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o1_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+        <p>with the 01 clang is handling the unroll algorithm better than gcc</p>
+
+    </section>
+<section>
+        <header><h3>Gcc vs Clang in o2</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/o2_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o2_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+
+        <header><h3>Gcc vs Clang in o3</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/o3_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o3_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+        <p>in o2 and o3 gcc we can see that clang is getting more optimized than clang</p>
+
+    </section>
+
+</section>
+
+<section>
+    <h2>REDUCTION</h2>
+    <section>
+        <header><h3>Gcc with Optimization flags</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/gcc_o0.png" alt="">
+            <img src="../reduc/graphs/gcc_o1.png" alt="">
+            <img src="../reduc/graphs/gcc_o2.png" alt="">
+            <img src="../reduc/graphs/gcc_o3.png" alt="">
+        </div>  
+    </section>
+    <section>
+        <header><h3>clang with Optimization flags</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/clang_o0.png" alt="">
+            <img src="../reduc/graphs/clang_o1.png" alt="">
+            <img src="../reduc/graphs/clang_o2.png" alt="">
+            <img src="../reduc/graphs/clang_o3.png" alt="">
+        </div>  
+    </section>
+    <section>
+        <header><h3>Gcc vs Clang in o0</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/o0_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o0_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+        <header><h3>Gcc vs Clang in o1</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/o1_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o1_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+    </section>
+    <section>
+        <header><h3>Gcc vs Clang in o2</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/o2_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o2_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+        <header><h3>Gcc vs Clang in o3</h3></header>
+        <div class="images_sec">
+            <img src="../reduc/graphs/o3_clang_gcc_BASE.png" alt="">
+            <img src="../reduc/graphs/o3_clang_gcc_UNROLL8.png" alt="">
+        </div>  
+    </section>
+    </section>
+</main>
+</body>
+</html>
