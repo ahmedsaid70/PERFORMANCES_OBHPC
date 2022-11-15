@@ -10,7 +10,6 @@ set xtics format ""
 
 
 
-
 #reduc gcc
 set title 'mesures of gcc compiler with O0 flag in REDUCTION operation'                       # plot title
 set output 'graphs/gcc_o0.png'
