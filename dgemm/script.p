@@ -10,9 +10,9 @@ set xtics format ""
 
 #gcc
 
-set title 'mesures of gcc compiler with O1 flag'                       # plot title
-set output 'graphs/gcc_o1.png'
-plot "gcc/O0/IKJ.txt" u STATS_size_x:key(1) title 'IKJ', "gcc/O0/IKJ.txt" u STATS_size_x:key(1) title 'IKJ' , "gcc/O0/IEX.txt" u STATS_size_x:key(1) title 'IEX' , "gcc/O0/CBLAS.txt" u STATS_size_x:key(1) title 'CBLAS' , "gcc/O0/UNROLL4.txt" u STATS_size_x:key(1) title 'UNROLL4' , "gcc/O0/UNROLL8.txt" u STATS_size_x:key(1) title 'UNROLL8'
+    set title 'mesures of gcc compiler with O1 flag'                       # plot title
+    set output 'graphs/gcc_o1.png'
+    plot "gcc/O0/IKJ.txt" u STATS_size_x:key(1) title 'IKJ', "gcc/O0/IKJ.txt" u STATS_size_x:key(1) title 'IKJ' , "gcc/O0/IEX.txt" u STATS_size_x:key(1) title 'IEX' , "gcc/O0/CBLAS.txt" u STATS_size_x:key(1) title 'CBLAS' , "gcc/O0/UNROLL4.txt" u STATS_size_x:key(1) title 'UNROLL4' , "gcc/O0/UNROLL8.txt" u STATS_size_x:key(1) title 'UNROLL8'
 
 set title 'mesures of gcc compiler with O2 flag'                       # plot title
 set output 'graphs/gcc_o2.png'
