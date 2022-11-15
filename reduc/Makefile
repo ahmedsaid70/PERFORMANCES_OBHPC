@@ -1,6 +1,6 @@
 CFLAGS=-g -Wall
 
-OFLAGS=-O3
+OFLAGS?=-O3
 
 INTEL_LFLAGS=-qmkl
 GNU_LFLAGS=-lm -lcblas
@@ -10,6 +10,8 @@ FILES=main.c tools.c kernels.c
 all: reduc
 
 reduc:
+	@echo "Compiler is  : $(CC) -----> Optimization is on : $(OFLAGS)"
+
 ifeq ($(CC),icc)
 	$(CC) $(CFLAGS) $(OFLAGS) $(FILES) -o $@ $(INTEL_LFLAGS)
 else
